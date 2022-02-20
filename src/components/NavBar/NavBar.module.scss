@@ -1,0 +1,30 @@
+@import '../../styles/settings.scss';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darken($color-dark, 3%);
+  line-height: 1.5;
+  padding: 20px;
+  font-weight: 700;
+}
+.icon {
+  text-decoration: none;
+  font-size:36px;
+  color: white;
+}
+.inside {
+  list-style-type: none;
+  padding-left: 20px;
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 20px;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+  }
+}
