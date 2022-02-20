@@ -6,16 +6,16 @@ import TextInput from './../TextInput/TextInput';
 const CardForm = props => {
     const [title, setTitle] = useState('');
     const handleSubmit = e => {
-        e.preventDefault();
-        props.action({ title: title }, props.columnId);
-        setTitle('');
-        console.log(e);
+      e.preventDefault();
+      props.action({ title: title }, props.columnId);
+      setTitle('');
+      // console.log(e);
     };
 
 	return (
         <form className={styles.cardForm} onSubmit={handleSubmit}>
-            <TextInput value={title} onChange={e => setTitle(e.target.value)} />
-            <Button>Add card</Button>
+          <TextInput value={title} onChange={e => setTitle(e.target.value)} />
+          <Button>Add card</Button>
         </form>
 	);
 };
