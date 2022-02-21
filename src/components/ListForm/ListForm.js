@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from './../Button/Button';
 import TextInput from './../TextInput/TextInput';
 import { useDispatch } from 'react-redux';
-import { addList } from '../../redux/store.js';
+import { addList } from '../../redux/listsRedux';
 
 const ListForm = props => {
     const [title, setTitle] = useState('');
@@ -20,7 +20,7 @@ const ListForm = props => {
     <form onSubmit={handleSubmit}>
         Title: <TextInput value={title} onChange={e => setTitle(e.target.value)} />
         Description: <TextInput value={description} onChange={e => setDescription(e.target.value)} />
-        <Button>Add column</Button>
+        <Button>Add list</Button>
     </form>
 	);
 };

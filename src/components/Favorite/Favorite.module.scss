@@ -19,6 +19,11 @@
   font-weight: normal;
 }
 
-.title + .subtitle {
-  margin-top: (- $base-size * 3);
+.icon {
+  display: flex;
+  font-size: 100px;
+  text-align: center;
+  justify-content: center;
+  font-weight: 900;
+  color: gold;
 }

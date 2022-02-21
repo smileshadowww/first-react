@@ -4,12 +4,12 @@ import Card from '../Card/Card'
 import CardForm from '../CardForm/CardForm'
 import { useSelector } from 'react-redux';
 import {Navigate} from 'react-router-dom';
-import { getFavoritesList } from '../../redux/store';
+import { getFavoritesList } from '../../redux/cardsRedux';
 
 const Favorite = props => {
 
   const cards = useSelector(state => getFavoritesList(state, props.id));
-  console.log(cards);
+  // console.log(cards);
   if(cards.length === 0) return <h2 className={styles.title}> There is no favorites cards for now </h2>
   return (
     <article className={styles.column}>
