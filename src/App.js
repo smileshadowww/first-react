@@ -1,5 +1,5 @@
-import Hero from './components/Hero/Hero'
-import SearchForm from './components/SearchForm/SearchForm'
+// import Hero from './components/Hero/Hero'
+// import SearchForm from './components/SearchForm/SearchForm'
 import List from './components/List/List'
 import Container from './components/Container/Container'
 import NavBar from './components/NavBar/NavBar'
@@ -16,6 +16,7 @@ const App = () => {
        <Container>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/list/:listId" element={<List />} />
             <Route path="/about" element={<About />} />
             <Route path="/favorite" element={<Favorite />} />
             <Route path="*" element={<ErrorPage />} />

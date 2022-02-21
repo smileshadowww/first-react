@@ -1,7 +1,6 @@
 export const strContains = (searchedStore, searchingString )=> {
-  if(searchedStore.toString().toLowerCase().includes(searchingString.toString().toLowerCase())){
-    return true;
-  } else {
-    return false;
-  }
+  console.log(searchedStore);
+  console.log(searchingString);
+  // (searchedStore.toString().toLowerCase().includes(searchingString.toString().toLowerCase()))
+  return searchedStore.toString().toLowerCase().includes(searchingString.toString().toLowerCase());
 }

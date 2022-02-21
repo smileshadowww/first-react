@@ -6,11 +6,16 @@ import { useSelector } from 'react-redux'
 //selectors
 export const getFilteredCards = ({ cards, searchingString }, columnId) => cards
   .filter(card => (card.columnId === columnId && strContains(card.title, searchingString)));
+export const getColumnsByList = ({ columns }, listId ) => columns.filter(column => column.listId === listId)
 export const getAllColumns = state => state.columns;
+export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId)
+export const getAllLists = ({ lists }) => lists;
+
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 export const addCard = payload => ({ type: 'ADD_CARD', payload });
 export const searchCard = payload => ({ type: 'SEARCH', payload });
+export const addList = payload => ({ type: 'ADD_LIST', payload });
 
 const reducer = (state, action) => {
   switch(action.type) {
@@ -18,6 +23,8 @@ const reducer = (state, action) => {
       return { ...state, columns: [...state.columns, { ...action.payload, id: shortid() }]};
     case 'ADD_CARD':
       return { ...state, cards: [...state.cards, { ...action.payload, id: shortid() }]};
+    case 'ADD_LIST':
+      return { ...state, lists: [...state.lists, { ...action.payload, id: shortid() }]};
     case 'SEARCH':
       return { ...state, searchingString: [action.payload]};
     default:
