@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { getColumnsByList, getListById } from '../../redux/store';
 import { useParams } from 'react-router';
 import {Navigate} from 'react-router-dom';
+import SearchForm from '../SearchForm/SearchForm'
 
 const List = () => {
   const { listId } = useParams();
@@ -20,6 +21,7 @@ const List = () => {
         <h2 className={styles.title}>Things to do<span>soon!</span></h2>
       </header>
       <p className={styles.description}>Interesting things I want to check out</p>
+      <SearchForm />
       <section className={styles.columns}>
         {columns.map(column =>
           <Column

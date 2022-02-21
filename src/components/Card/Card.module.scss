@@ -11,3 +11,15 @@
     justify-content: space-between;
     font-weight: bold;
 }
+.button {
+  color: white;
+  background: transparent;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+
+  &.isFavorite {
+    color: gold;
+  }
+}
