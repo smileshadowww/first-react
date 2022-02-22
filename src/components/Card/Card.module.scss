@@ -12,12 +12,12 @@
     font-weight: bold;
 }
 .button {
-  color: white;
+  color: grey;
   background: transparent;
   border: 0;
   text-align: center;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 900;
 
   &.isFavorite {
     color: gold;
