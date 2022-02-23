@@ -1,7 +1,7 @@
 import shortid from 'shortid';
 
 export const getAllColumns = state => state.columns;
-export const getColumnsByList = ({ columns }, listId ) => columns.filter(column => column.listId === listId)
+export const getColumnsByList = ({ columns }, listId ) => columns.filter(column => column.listId === listId);
 
 const createActionName = actionName => `app/lists/${actionName}`;
 const ADD_COLUMN = createActionName('ADD_COLUMN');
